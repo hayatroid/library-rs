@@ -1,11 +1,14 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: crates/dp/src/lib.rs
+    title: crates/dp/src/lib.rs
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: rs
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_B
     links:
@@ -17,22 +20,23 @@ data:
     \  File \"/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/rust.py\"\
     , line 288, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "// verification-helper: PROBLEM https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_B\n\
-    \nuse library::dp::*;\nuse proconio::input;\n\n#[allow(non_snake_case)]\nfn main()\
-    \ {\n    input! {\n        n: usize,\n        W: usize,\n        vw: [(u32, usize);\
+    \nuse dp::*;\nuse proconio::input;\n\n#[allow(non_snake_case)]\nfn main() {\n\
+    \    input! {\n        n: usize,\n        W: usize,\n        vw: [(u32, usize);\
     \ n],\n    }\n    let w = vw.iter().map(|&p| p.1).collect::<Vec<_>>();\n    let\
     \ v = vw.iter().map(|&p| p.0).collect::<Vec<_>>();\n    println!(\"{}\", knapsack_01(w,\
     \ v, W));\n}\n"
-  dependsOn: []
-  isVerificationFile: false
+  dependsOn:
+  - crates/dp/src/lib.rs
+  isVerificationFile: true
   path: examples/knapsack-01.rs
   requiredBy: []
-  timestamp: '2023-01-29 01:05:50+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2023-01-29 01:20:35+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: examples/knapsack-01.rs
 layout: document
 redirect_from:
-- /library/examples/knapsack-01.rs
-- /library/examples/knapsack-01.rs.html
+- /verify/examples/knapsack-01.rs
+- /verify/examples/knapsack-01.rs.html
 title: examples/knapsack-01.rs
 ---
