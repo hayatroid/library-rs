@@ -1,6 +1,6 @@
 // verification-helper: PROBLEM https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_B
 
-use library::dp::*;
+use dp::*;
 use proconio::input;
 
 #[allow(non_snake_case)]
