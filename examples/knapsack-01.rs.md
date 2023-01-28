@@ -21,12 +21,12 @@ data:
     \ {\n    input! {\n        n: usize,\n        W: usize,\n        vw: [(u32, usize);\
     \ n],\n    }\n    let w = vw.iter().map(|&p| p.1).collect::<Vec<_>>();\n    let\
     \ v = vw.iter().map(|&p| p.0).collect::<Vec<_>>();\n    println!(\"{}\", knapsack_01(w,\
-    \ v, W));\n}\n\n//\n"
+    \ v, W));\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: examples/knapsack-01.rs
   requiredBy: []
-  timestamp: '2023-01-29 01:00:59+09:00'
+  timestamp: '2023-01-29 01:05:50+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: examples/knapsack-01.rs
