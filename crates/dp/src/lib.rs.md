@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: examples/knapsack-01-2.rs
     title: examples/knapsack-01-2.rs
   - icon: ':heavy_check_mark:'
     path: examples/knapsack-01.rs
     title: examples/knapsack-01.rs
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: rs
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -34,7 +34,7 @@ data:
   path: crates/dp/src/lib.rs
   requiredBy: []
   timestamp: '2023-01-30 00:11:35+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - examples/knapsack-01-2.rs
   - examples/knapsack-01.rs
