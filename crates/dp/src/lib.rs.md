@@ -3,12 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
+  - icon: ':x:'
+    path: examples/knapsack-01-2.rs
+    title: examples/knapsack-01-2.rs
   - icon: ':heavy_check_mark:'
     path: examples/knapsack-01.rs
     title: examples/knapsack-01.rs
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: rs
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -17,18 +20,23 @@ data:
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/rust.py\"\
     , line 288, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "#[allow(non_snake_case)]\npub fn knapsack_01<T>(w: Vec<usize>, v: Vec<T>,\
-    \ W: usize) -> T\nwhere\n    T: Copy + std::ops::Add<Output = T> + std::cmp::Ord\
-    \ + std::default::Default,\n{\n    let mut dp = vec![T::default(); W + 1];\n \
-    \   for (w, v) in w.into_iter().zip(v) {\n        for i in (w..=W).rev() {\n \
-    \           dp[i] = dp[i].max(dp[i - w] + v);\n        }\n    }\n    dp[W]\n}\n"
+  code: "#[allow(non_snake_case)]\npub fn knapsack_01(w: Vec<usize>, v: Vec<u64>,\
+    \ W: usize) -> u64 {\n    let mut dp = vec![0; W + 1];\n    for (&w, &v) in w.iter().zip(v.iter())\
+    \ {\n        for i in (w..=W).rev() {\n            dp[i] = dp[i].max(dp[i - w]\
+    \ + v);\n        }\n    }\n    dp[W]\n}\n\n#[allow(non_snake_case)]\npub fn knapsack_01_2(w:\
+    \ Vec<u64>, v: Vec<usize>, W: u64) -> usize {\n    let sum = v.iter().sum();\n\
+    \    let mut dp = vec![W + 1; sum + 1];\n    dp[0] = 0;\n    for (&w, &v) in w.iter().zip(v.iter())\
+    \ {\n        for i in (v..=sum).rev() {\n            dp[i] = dp[i].min(dp[i -\
+    \ v] + w);\n        }\n    }\n    dp.into_iter().rposition(|x| x <= W).unwrap()\n\
+    }\n"
   dependsOn: []
   isVerificationFile: false
   path: crates/dp/src/lib.rs
   requiredBy: []
-  timestamp: '2023-01-29 00:04:11+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2023-01-30 00:11:35+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - examples/knapsack-01-2.rs
   - examples/knapsack-01.rs
 documentation_of: crates/dp/src/lib.rs
 layout: document
