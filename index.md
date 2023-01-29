@@ -10,6 +10,9 @@ data:
   - name: examples
     pages:
     - icon: ':heavy_check_mark:'
+      path: examples/a-plus-b.rs
+      title: examples/a-plus-b.rs
+    - icon: ':heavy_check_mark:'
       path: examples/knapsack-01-2.rs
       title: examples/knapsack-01-2.rs
     - icon: ':heavy_check_mark:'

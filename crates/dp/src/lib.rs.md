@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: examples/a-plus-b.rs
+    title: examples/a-plus-b.rs
+  - icon: ':heavy_check_mark:'
     path: examples/knapsack-01-2.rs
     title: examples/knapsack-01-2.rs
   - icon: ':heavy_check_mark:'
@@ -37,6 +40,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - examples/knapsack-01-2.rs
+  - examples/a-plus-b.rs
   - examples/knapsack-01.rs
 documentation_of: crates/dp/src/lib.rs
 layout: document
